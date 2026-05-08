@@ -121,7 +121,7 @@ nonprofit-financial-report-automation/
 │   └── datas.py
 │
 ├── gerar_dados_ficticios.py
-├── gerador_comprovantes_ficticios.py
+├── gerar_comprovantes_ficticios.py
 ├── main.py
 ├── requirements.txt
 └── README.md
