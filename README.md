@@ -20,7 +20,7 @@ O projeto automatiza desde a geração dos lançamentos financeiros até a monta
 - Fluxo validado em ambiente operacional
 - Estrutura modular orientada a serviços
 - Integração Excel → PDF automatizada
-- Compátivel com fluxo contábil real
+- Compatível com fluxo contábil real
 
 ---
 
