@@ -1,0 +1,29 @@
+# Ambiente virtual
+.venv/
+
+# Credenciais
+.env
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Arquivos gerados pelo sistema
+relatorio_*.xlsx
+relatorio_*.pdf
+comprovantes_*.pdf
+dossie_*.pdf
+capa_*.pdf
+
+# Dados gerados
+dados/2025/02/
+dados/2025/03/
+dados/2025/04/
+dados/2025/05/
+dados/2025/06/
+dados/2025/07/
+dados/2025/08/
+dados/2025/09/
+dados/2025/10/
+dados/2025/11/
+dados/2025/12/
