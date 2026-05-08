@@ -14,6 +14,16 @@ O projeto automatiza desde a geração dos lançamentos financeiros até a monta
 
 ---
 
+## Destaque
+
+- Sistema inspirado em operação real de tesouraria
+- Fluxo validado em ambiente operacional
+- Estrutura modular orientada a serviços
+- Integração Excel → PDF automatizada
+- Compátivel com fluxo contábil real
+
+---
+
 ## Sobre o projeto
 
 Este projeto nasceu da necessidade de automatizar um processo operacional real de tesouraria que exigia horas de trabalho manual todos os meses.
@@ -30,6 +40,87 @@ O sistema simula um fluxo completo de gestão documental financeira, incluindo:
 - exportação em Excel e PDF
 
 O foco do projeto não está apenas na geração de arquivos, mas na construção de um pipeline modular, validável e próximo de um cenário operacional real.
+
+---
+
+## Cenário simulado
+
+O projeto simula o fluxo operacional de prestção de contas mensal de uma oranização sem fins lucrativos, incluindo:
+
+- Tesouraria
+- Organização documental
+- Auditoria básica
+- Prestação de contas
+- Integração contábil
+- Validação de comprovantes
+
+Todo o fluxo foi estruturado para se aproximar de um ambiente operacional real.
+
+---
+
+## Demonstração Visual
+
+### Pipeline ETL Documental
+
+Visão geral do fluxo automatizado do sistema, desde a geração dos dados financeiros até a montagem final do dossiê mensal.
+
+<p align="center">
+  <img src="assets/readme/fluxo.png" width="650">
+</p>
+
+---
+
+### Estrutura do Projeto
+
+Organização modular do sistema seguindo separação de responsabilidades.
+
+<p align="center">
+  <img src="assets/readme/estrutura_pastas.png" width="500">
+</p>
+
+---
+
+### Relatório Financeiro em Excel
+
+Relatório estruturado automaticamente para integração contábil.
+
+<p align="center">
+  <img src="assets/readme/excel_relatorio.png" width="700">
+</p>
+
+---
+
+### Relatório Oficial em PDF
+
+Versão final em PDF gerada automaticamente pelo pipeline.
+
+<p align="center">
+  <img src="assets/readme/pdf_relatorio.png" width="700">
+</p>
+
+---
+
+### Comprovantes Financeiros
+
+Comprovantes organizados e vinculados automaticamente aos lançamentos financeiros.
+
+<p align="center">
+  <img src="assets/readme/comprovante.png" width="400">
+</p>
+
+---
+
+### Dossiê Final Consolidado
+
+Documento final montado automaticamente contendo:
+- capa personalizada
+- relatório financeiro
+- comprovantes anexados
+- organização mensal completa
+
+<p align="center">
+  <img src="assets/readme/dossie_final.png" width="500">
+</p>
 
 ---
 
@@ -69,7 +160,7 @@ O foco do projeto não está apenas na geração de arquivos, mas na construçã
 
 - Verificação de comprovantes faltantes
 - Auditoria de consistência
-- Alertas detalhadas por lançamento
+- Alertas detalhados por lançamento
 
 ### Montagem de dossiê
 
@@ -82,7 +173,7 @@ O foco do projeto não está apenas na geração de arquivos, mas na construçã
 
 ## Arquitetura do projeto
 
-O sistema foi estruturado com separação de responsbilidades para facilitar manutenção, escalabilidade e evolução futura.
+O sistema foi estruturado com separação de responsabilidades para facilitar manutenção, escalabilidade e evolução futura.
 
 ```bash
 nonprofit-financial-report-automation/
@@ -198,13 +289,13 @@ Durante o desenvolvimento foram trabalhados conceitos como:
 - Organização de pipelines
 - Debugging de sistemas reais
 
-**Aprendizao técnico em destaque – parsing de datas:**
+**Aprendizado técnico em destaque – parsing de datas:**
 
-Durante o debugging do sistema, foi identificado um bug silencioso causado pelo parâmetro `dayfirst=True` no `pd.read_excel()`.
+Durante o debugging do sistema, foi identificado um bug silencioso causado pelo parâmetro `dayfirst=True` no `pd.to_datetime()`.
 
 O problema não quebrava o sistema – os arquivos eram gerados normalmente – mas invertia mês e dia em datas no formato `YYYY-MM-DD`, fazendo lançamentos caírem no mês errado e comprometendo toda a lógica de processamento mensal.
 
-A solução foi remover o parâmetro, já que o formato `YYYY-MM-DD` é interpretado corretamente pelo pandas por padrão. O `dayfirst=True`só faz sentido para datas no formato `DD/MM/YYYY`.
+A solução foi remover o parâmetro, já que o formato `YYYY-MM-DD` é interpretado corretamente pelo pandas por padrão. O `dayfirst=True` só faz sentido para datas no formato `DD/MM/YYYY`.
 
 Esse bug levou 5 dias de investigação sistemática para ser identificado – e evidencia a importância de validar o parsing de datas antes de qualquer processamento.
 
