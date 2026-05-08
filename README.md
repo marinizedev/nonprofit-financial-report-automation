@@ -65,7 +65,7 @@ Todo o fluxo foi estruturado para se aproximar de um ambiente operacional real.
 Visão geral do fluxo automatizado do sistema, desde a geração dos dados financeiros até a montagem final do dossiê mensal.
 
 <p align="center">
-  <img src="assets/readme/fluxo.png" width="650">
+  <img src="assets/readme/fluxo.png" width="400">
 </p>
 
 ---
@@ -75,7 +75,7 @@ Visão geral do fluxo automatizado do sistema, desde a geração dos dados finan
 Organização modular do sistema seguindo separação de responsabilidades.
 
 <p align="center">
-  <img src="assets/readme/estrutura_pastas.png" width="500">
+  <img src="assets/readme/estrutura_pastas.png" width="400">
 </p>
 
 ---
@@ -105,7 +105,7 @@ Versão final em PDF gerada automaticamente pelo pipeline.
 Comprovantes organizados e vinculados automaticamente aos lançamentos financeiros.
 
 <p align="center">
-  <img src="assets/readme/comprovante.png" width="400">
+  <img src="assets/readme/comprovante.png" width="500">
 </p>
 
 ---
