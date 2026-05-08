@@ -85,7 +85,7 @@ Organização modular do sistema seguindo separação de responsabilidades.
 Relatório estruturado automaticamente para integração contábil.
 
 <p align="center">
-  <img src="assets/readme/excel_relatorio.png" width="700">
+  <img src="assets/readme/excel_relatorio.png" width="400">
 </p>
 
 ---
@@ -95,7 +95,7 @@ Relatório estruturado automaticamente para integração contábil.
 Versão final em PDF gerada automaticamente pelo pipeline.
 
 <p align="center">
-  <img src="assets/readme/pdf_relatorio.png" width="700">
+  <img src="assets/readme/pdf_relatorio.png" width="400">
 </p>
 
 ---
