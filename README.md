@@ -204,7 +204,7 @@ Durante o debugging do sistema, foi identificado um bug silencioso causado pelo 
 
 O problema não quebrava o sistema – os arquivos eram gerados normalmente – mas invertia mês e dia em datas no formato `YYYY-MM-DD`, fazendo lançamentos caírem no mês errado e comprometendo toda a lógica de processamento mensal.
 
-A solução foi remover o parâmetro, já que o formato `YYYY-MM-DD` é interpretado corretamente pelo pandas por padrã. O `dayfirst=True`só faz sentido para datas no formato `DD/MM/YYYY`.
+A solução foi remover o parâmetro, já que o formato `YYYY-MM-DD` é interpretado corretamente pelo pandas por padrão. O `dayfirst=True`só faz sentido para datas no formato `DD/MM/YYYY`.
 
 Esse bug levou 5 dias de investigação sistemática para ser identificado – e evidencia a importância de validar o parsing de datas antes de qualquer processamento.
 
@@ -224,20 +224,20 @@ Esse bug levou 5 dias de investigação sistemática para ser identificado – e
 
 ## Como executar
 
-1. Clone o repositório
+### 1. Clone o repositório
 
 ```bash
 git clone https://github.com/marinizedev/nonprofit-financial-report-automation.git 
 cd nonprofit-financial-report-automation
 ```
 
-2. Crie o ambiente virtual
+### 2. Crie o ambiente virtual
 
 ```bash
 python -m venv .venv
 ```
 
-3. Ative o ambiente virtual
+### 3. Ative o ambiente virtual
 
 **Windows**
 
@@ -245,7 +245,13 @@ python -m venv .venv
 .venv\Scripts\activate
 ```
 
-4. Instale as dependências
+**Linux/Mac**
+
+```bash
+source .venv/bin/activate
+```
+
+### 4. Instale as dependências
 
 ```bash
 pip install -r requirements.txt
@@ -268,23 +274,26 @@ LIBREOFFICE_PATH=/Applications/LibreOffice.app/Contents/MacOS/soffice
 
 > O LibreOffice precisa estar instalado no sistema para a conversão de Excel para PDF funcionar.
 
-6. Gera dados fictícios
+### 6. Gere os dados fictícios
 
 ```bash
 python gerar_dados_ficticios.py
 ```
 
-7. Execute o sistema
+> Esse script gera a planilha de lançamentos fictícios necessária para o sistema.
+
+### 7. Execute o sistema
 
 ```bash
 python main.py
 ```
 
+> O sistema irá processar os dados, gerar os comprovantes, relatórios, validar a documentação e montar o dossiê mensal completo.
+
 ---
 
 # Autora
 
-**Marinize Santana**
-Estudante de Análise e Desenvolvimento de Sistemas com foco em Engenharia de Dados e Analytics.
+**Marinize Santana** — Estudante de Análise e Desenvolvimento de Sistemas com foco em Engenharia de Dados e Analytics.
 
 Desenvolvendo soluções orientadas por problemas reais, com foco em automação, dados e arquitetura modular.
