@@ -45,7 +45,7 @@ O foco do projeto não está apenas na geração de arquivos, mas na construçã
 
 ## Cenário simulado
 
-O projeto simula o fluxo operacional de prestção de contas mensal de uma oranização sem fins lucrativos, incluindo:
+O projeto simula o fluxo operacional de prestação de contas mensal de uma oranização sem fins lucrativos, incluindo:
 
 - Tesouraria
 - Organização documental
